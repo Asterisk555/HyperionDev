@@ -15,9 +15,9 @@ while True:
         print("You will now be asked to input information required for the investment calculation.")
 
         # Following section asks for all information required for investment calculation.
-        deposit = float(input("Amount of money being deposited (GBP): "))
-        interest_rate = float(input("Interest rate per year (%): "))
-        interest_years = int(input("Duration to invest (years): "))
+        deposit = float(input("Amount of money being deposited (GBP): "))  # GBP
+        interest_rate = float(input("Interest rate per year (%): "))  # percentage points
+        interest_years = int(input("Duration to invest (years): "))  # years
         interest_type = input("Simple or compound interest: ")
 
         interest_type = interest_type.lower()
@@ -36,9 +36,9 @@ while True:
         print("You will now be asked to input information required for the home loan repayment calculation.")
 
         # Following section asks for all information required for bond calculation.
-        bond_price = float(input("House price (GBP): "))
-        interest_rate = float(input("Interest rate per year (%): "))
-        interest_months = int(input("How many months do you wish the spread bond repayments over: "))
+        bond_price = float(input("House price (GBP): "))  # GBP
+        interest_rate = float(input("Interest rate per year (%): "))  # percentage points
+        interest_months = int(input("How many months do you wish the spread bond repayments over: "))  # months
 
         bond_total = round(((interest_rate / 12) * bond_price) / (1-(1+interest_rate) ** (-interest_months)), 2)
 
